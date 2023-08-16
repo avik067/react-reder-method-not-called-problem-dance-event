@@ -1,0 +1,28 @@
+/* Write your CSS here */
+
+.but:hover {
+  border: 2px solid green;
+  outline: none;
+}
+.but {
+  padding: 0px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  margin: 3px;
+  box-sizing: content-box;
+}
+
+.img {
+  max-height: 100px;
+  max-width: 200px;
+}
+
+.name {
+  font-size: 15px;
+  color: #ffffff;
+}
+.place {
+  font-size: 10px;
+  color: #ffffff;
+}
