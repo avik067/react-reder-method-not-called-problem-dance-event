@@ -10,17 +10,10 @@ const statusData = {
 }
 
 class ActiveEventRegistrationDetails extends Component {
-  state = {status: statusData.registrationInt}
+  render() {
+    const {statePassed} = this.props
 
-  componentDidMount() {
-    const {statusPassed} = this.props
-    this.setState(pre => ({...pre, status: statusPassed}))
-  }
-
-  renderGui = () => {
-    const {status} = this.state
-    console.log(status)
-    switch (status) {
+    switch (statePassed) {
       case statusData.registrationInt:
         return (
           <p className="initialData">
@@ -40,10 +33,6 @@ class ActiveEventRegistrationDetails extends Component {
       default:
         return null
     }
-  }
-
-  render() {
-    return this.renderGui()
   }
 }
 

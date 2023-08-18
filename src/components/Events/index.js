@@ -13,6 +13,11 @@ class Events extends Component {
     this.setState({status: registrationStatus})
   }
 
+  reRenderSwitchTriggered = () => {
+    console.log('hi')
+    this.setState(pre => ({...pre}))
+  }
+
   render() {
     const {status} = this.state
 
@@ -31,7 +36,10 @@ class Events extends Component {
           </ul>
         </div>
         <div className="right">
-          <ActiveEventRegistrationDetails statusPassed={status} />
+          <ActiveEventRegistrationDetails
+            statePassed={status}
+            reRenderSwitchTriggered={this.reRenderSwitchTriggered}
+          />
         </div>
       </div>
     )
