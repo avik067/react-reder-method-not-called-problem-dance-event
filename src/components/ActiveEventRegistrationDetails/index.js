@@ -10,6 +10,11 @@ const statusData = {
 }
 
 class ActiveEventRegistrationDetails extends Component {
+  registerRequest = () => {
+    const {idPassed, changeStatus} = this.props
+    changeStatus(idPassed)
+  }
+
   render() {
     const {statePassed} = this.props
 
@@ -48,7 +53,11 @@ class ActiveEventRegistrationDetails extends Component {
               with this beautiful art form.
             </p>
             <div className="col ceneter non-stretch">
-              <button type="button" className="regi-but">
+              <button
+                type="button"
+                className="regi-but"
+                onClick={this.registerRequest}
+              >
                 Register Here
               </button>
             </div>

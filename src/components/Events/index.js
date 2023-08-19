@@ -6,27 +6,39 @@ import ActiveEventRegistrationDetails from '../ActiveEventRegistrationDetails'
 import './index.css'
 
 class Events extends Component {
-  state = {status: ''}
+  state = {activeId: '', status: '', listItem: eventsList}
 
   selectItem = (id, registrationStatus) => {
-    console.log(id)
-    this.setState({status: registrationStatus})
+    this.setState({status: registrationStatus, activeId: id})
   }
 
-  reRenderSwitchTriggered = () => {
-    console.log('hi')
-    this.setState(pre => ({...pre}))
+  changeStatus = id => {
+    console.log(id)
+    const {listItem} = this.state
+    const newListItem = listItem.map(each => {
+      if (each.id === id) {
+        return {...each, registrationStatus: 'REGISTERED'}
+      }
+
+      return each
+    })
+
+    this.setState(pre => ({
+      ...pre,
+      listItem: newListItem,
+      status: 'REGISTERED',
+    }))
   }
 
   render() {
-    const {status} = this.state
+    const {status, listItem, activeId} = this.state
 
     return (
       <div className="main-event-page row apart">
         <div className="dark">
           <h1 className="dark-head">Event</h1>
           <ul className="row wrap">
-            {eventsList.map(each => (
+            {listItem.map(each => (
               <EventItem
                 key={each.id}
                 details={each}
@@ -37,8 +49,9 @@ class Events extends Component {
         </div>
         <div className="right">
           <ActiveEventRegistrationDetails
+            idPassed={activeId}
             statePassed={status}
-            reRenderSwitchTriggered={this.reRenderSwitchTriggered}
+            changeStatus={this.changeStatus}
           />
         </div>
       </div>
