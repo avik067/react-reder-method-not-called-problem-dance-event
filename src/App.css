@@ -32,3 +32,6 @@ body {
 li {
   list-style: none;
 }
+.non-stretch {
+  align-items: center;
+}

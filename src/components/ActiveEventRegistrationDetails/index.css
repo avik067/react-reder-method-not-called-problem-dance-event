@@ -5,3 +5,14 @@
   font-size: 20px;
   color: #64748b;
 }
+.result-img {
+  height: 200px;
+}
+.regi-but {
+  background-color: #0967d2;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}

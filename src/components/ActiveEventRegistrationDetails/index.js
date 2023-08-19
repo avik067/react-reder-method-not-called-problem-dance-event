@@ -22,13 +22,52 @@ class ActiveEventRegistrationDetails extends Component {
         )
 
       case statusData.registrationClose:
-        return <p className="initialData">closed</p>
+        return (
+          <div className="col center non-stretch">
+            <img
+              className="result-img"
+              src="https://assets.ccbp.in/frontend/react-js/events-registrations-closed-img.png"
+              alt="registrations closed"
+            />
+            <h1>Registrations Are Closed Now!</h1>
+            <p>Stay tuned.We will reopen this Registrations soon!</p>
+          </div>
+        )
 
       case statusData.registrationOpen:
-        return <p className="initialData">Open</p>
+        return (
+          <div className="col center non-stretch">
+            <img
+              className="result-img"
+              src="https://assets.ccbp.in/frontend/react-js/events-register-img.png"
+              alt="yet to register"
+            />
+            <p className="initialData">
+              A live performance brings so much to your relationship with
+              dance.Seeing dance live can often make you fall totally in love
+              with this beautiful art form.
+            </p>
+            <div className="col ceneter non-stretch">
+              <button type="button" className="regi-but">
+                Register Here
+              </button>
+            </div>
+          </div>
+        )
 
       case statusData.registrationDone:
-        return <p className="initialData">Done</p>
+        return (
+          <div className="col center non-stretch">
+            <div>
+              <img
+                className="result-img"
+                src="https://assets.ccbp.in/frontend/react-js/events-regestered-img.png"
+                alt="registered"
+              />
+            </div>
+            <p className="initialData">You have already registered for this</p>
+          </div>
+        )
 
       default:
         return null
