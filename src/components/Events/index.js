@@ -36,7 +36,7 @@ class Events extends Component {
     return (
       <div className="main-event-page row apart">
         <div className="dark">
-          <h1 className="dark-head">Event</h1>
+          <h1 className="dark-head">Events</h1>
           <ul className="row wrap">
             {listItem.map(each => (
               <EventItem

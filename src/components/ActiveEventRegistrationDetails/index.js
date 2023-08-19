@@ -22,7 +22,7 @@ class ActiveEventRegistrationDetails extends Component {
       case statusData.registrationInt:
         return (
           <p className="initialData">
-            Click on an event , to view its registraton details
+            Click on an event, to view its registration details
           </p>
         )
 
@@ -35,7 +35,7 @@ class ActiveEventRegistrationDetails extends Component {
               alt="registrations closed"
             />
             <h1>Registrations Are Closed Now!</h1>
-            <p>Stay tuned.We will reopen this Registrations soon!</p>
+            <p>Stay tuned. We will reopen</p>
           </div>
         )
 
@@ -74,7 +74,9 @@ class ActiveEventRegistrationDetails extends Component {
                 alt="registered"
               />
             </div>
-            <p className="initialData">You have already registered for this</p>
+            <h1 className="initialData">
+              You have already registered for the event
+            </h1>
           </div>
         )
 

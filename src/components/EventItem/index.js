@@ -12,7 +12,7 @@ const EventItem = ({details, triggerFuction}) => {
       <button className="but" type="button" onClick={selectItem}>
         <img className="img" src={imageUrl} alt="event" />
       </button>
-      <h1 className="name">{name}</h1>
+      <p className="name">{name}</p>
       <p className="place">{location}</p>
     </li>
   )
